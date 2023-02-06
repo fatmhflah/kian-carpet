@@ -1,0 +1,203 @@
+.main-header{
+  box-shadow: rgb(0 0 0 / 4%) 0px 3px 5px;
+  .header-wrapper{
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+
+  }//header-wrapper
+
+  .top-header{
+    .icon{
+      @include font-size(25px);
+    }
+    .header-logo{
+      .logo-wrapper{
+        display: inline-block;
+        width: 150px;
+        img {
+          width: 100%;
+        }
+      }
+    }//header-logo
+    .header-search{
+      position: relative;
+      &__input {
+        min-width: 320px;
+        height: 45px;
+        padding-left: 50px;
+        border: 2px solid #0000001a;
+        border-radius: $border-radius-sm;
+
+      }
+      &__button {
+        position: absolute;
+        top: 12px;
+        left: 0px;
+
+      }
+
+    }//header-search
+    .header-items{
+      display: flex;
+      .info-box-wrapper{
+        display: flex;
+
+        .icon{
+          width: 40px;
+          height: 40px;
+          margin-left: 11px;
+          img{
+            width: 100%;
+          }
+        }
+
+      }//info-box-wrapper
+      .header-wishlist{
+        .count-badge{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          font-weight: 600;
+          font-size: 11px;
+          line-height: 20px;
+          background-color: $primary-color;
+          border-radius: 50%;
+        }
+      }//header-wishlist
+    }//header-items
+  }//top-header
+  .bottom-header{
+    .menu {
+      background: $menu_background;
+    }
+    .menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .menu,
+    .menu a {
+      color: $menu_color;
+      text-decoration: none;
+    }
+    .menu a {
+      display: block;
+      white-space: nowrap; // prevent links form going to a new line
+    }
+
+    .menu-dropdown,
+    .menu input[type="checkbox"] { // hide defaults
+      @include hide;
+    }
+    .menu label:hover {
+      cursor: pointer;
+    }
+    /* narrow styles */
+    @media screen and (max-width: $menu_breakpoint) {
+      // hide navigation and right icons
+      .menu > ul,
+      .menu-righticon {
+        @include hide;
+      }
+      input[type="checkbox"]:checked + ul {
+        @include show;
+      }
+    }
+    /* large styles */
+    @media screen and (min-width: $menu_breakpoint + 1px) {
+      // hide show navigation button and checkboxes
+      .menu > label,
+      input[type="checkbox"] {
+        @include hide;
+      }
+      .menu a {
+        padding: $menu_padding;
+      }
+      // align items and style them
+      .menu > ul > li {
+        display: inline-block;
+      }
+      // hover logics
+      .menu-hasdropdown {
+        position: relative;
+        &:hover {
+          > ul {
+            @include show;
+          }
+        }
+      }
+      // dropdown position and style
+      .menu-hasdropdown > ul {
+        position: absolute;
+        top:100%;
+        left: 0;
+        background: $menu_background;
+      }
+      // flyout position
+      .menu-hasflyout > ul {
+        left: 100%;
+        top:0;
+      }
+      .menu-hasflyout .menu-downicon {
+        @include hide;
+      }
+    }
+
+    /* look and feel only, not needed for core menu*/
+    // optional animation for display none/block
+    @keyframes grow {
+      0% {
+        display: none;
+        opacity: 0;
+      }
+      50% {
+        display: block;
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .menu-dropdown a {
+      padding: $menu_padding;
+      border-bottom: $menu_border;
+    }
+    /* narrow  */
+    @media screen and (max-width: $menu_breakpoint) {
+      .menu > label {
+        background: $menu_toggle_background;
+        display: block;
+        padding: $menu_padding;
+        text-align: right;
+      }
+      .menu a {
+        padding: $menu_padding;
+      }
+      .menu > ul i {
+        float: right;
+        padding: $menu_icon_padding;
+        background: darken($menu_background,15%);
+      }
+      .menu-dropdown  a {
+        background: darken($menu_background,5%);
+      }
+      .menu-hasflyout > ul a {
+        background: darken($menu_background,10%);
+      }
+    }
+    @media screen and (min-width: $menu_breakpoint + 1px) {
+      .menu {
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+    }
+    .category-icon {
+      width: 18px;
+      margin-left: 10px;
+    }
+  }//bottom-header
+}

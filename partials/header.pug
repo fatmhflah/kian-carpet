@@ -1,0 +1,78 @@
+header.main-header(id="home")
+  .top-header
+      .container
+          .row.header-wrapper
+              .col-auto.col-lg-3
+                  .header-logo
+                      a.logo-wrapper(href="/")
+                        img(src="./images/logo.webp")
+              .col-auto.col-lg-3
+                  .header-search
+                      form.header-search
+                          input.header-search__input(type="text" placeholder="جستجوی محصولات")
+                          button.main-btn.header-search__button(type="submit")
+                            i.icon.bi.bi-search
+
+              .col-auto.col-lg-3
+                  .header-items
+                      .info-box-wrapper
+                          .icon
+                              img(src="./images/content-icon.svg")
+                          .info-box-content
+                              .info-box-subtitle نیاز به راهنمایی دارید ؟
+                              .info-box-title 031-555555
+                      .header-wishlist
+                          a(href="")
+
+                            i.icon.bi.bi-suit-heart
+                            span.count-badge 0
+                      .header-cart
+                          a(href="")
+                            i.icon.bi.bi-cart2
+  //top-header
+  .bottom-header
+      .container
+          .row
+              .header-wrapper
+                  .col-auto.col-lg-7
+                      nav.menu(role='navigation')
+                          label(for='menu')
+                              i.bi.bi-list
+                          input#menu(type='checkbox')
+                          ul
+                              li.menu-hasdropdown
+                                  a(href='#')
+                                      img.category-icon(src='./images/category-icon.svg')
+                                      | دسته بندی محصولات
+                                      label(title='toggle menu', for='about')
+                                          i.fa.fa-caret-down
+                                  input#about(type='checkbox')
+                                  ul.menu-dropdown
+                                      li
+                                          a(href='') فرش کودک
+                                      li
+                                          a(href='') فرش آشپزخانه
+                                      li.menu-hasdropdown.menu-hasflyout
+                                          a(href='')
+                                              | فرش مربع
+                                              label(title='toggle menu', for='services')
+                                                  i.fa.fa-caret-down.menu-downicon
+                                                  i.fa.fa-caret-right.menu-righticon
+                                          input#services(type='checkbox')
+                                          ul.menu-dropdown
+                                              li
+                                                  a(href='') 1000 شانه
+                                              li
+                                                  a(href='') 2000 شانه
+                                              li
+                                                  a(href='') 5000 شانه
+                              li
+                                  a(href='#') خانه
+
+                              li
+                                  a(href='#') دکوراسیون مشتریان
+                              li
+                                  a(href='#') درباره ما
+                              li
+                                  a(href='#') تماس با ما
+                  .col-lg-3

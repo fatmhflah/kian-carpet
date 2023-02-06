@@ -1,0 +1,140 @@
+extends partials/layout
+block main
+    section.index-sec.main-slider
+      .swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            a(href='#')
+                                img(src='images/item1-slider.jpg')
+                        .swiper-slide
+                            a(href='#')
+                                img(src='images/item2-slider.jpg')
+                        .swiper-slide
+                            a(href='#')
+                                img(src='images/item3-slider.jpg')
+                        .swiper-slide
+                            a(href='#')
+                                img(src='images/item4-slider.gif')
+                    .swiper-pagination
+                    .swiper-button-prev
+                        span.icon
+                    .swiper-button-next
+                    .swiper-scrollbar
+    //main-slider
+    section.index-sec
+        .container
+            .row.banners__wrapper
+                .col-auto.col-lg-5
+                    .banners__item
+                        img(src='images/banner-carpet7.jpg')
+                .col-auto.col-lg-4
+                    .banners__item
+                        img(src='images/banner-carpet9.jpg')
+                    .banners__item
+                        img(src='images/banner-carpet1.jfif')
+                .col-auto.col-lg-3
+                    .banners__item
+                        img(src='images/banner-carpet3.jfif')
+                    .banners__item
+                        img(src='images/banner-carpet2.jfif')
+
+
+
+    //banner-wrapper
+    section.index-sec.category
+        .container
+            .index-widget-header
+                .title-line دسته بندی محصولات
+
+
+
+
+
+            .row
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش دستباف
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش آشپزخانه
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش کودک
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش مستطیل
+
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش دستباف
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش آشپزخانه
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش کودک
+                article.col-auto.col-lg-3
+                    a.category-card(href='#')
+                        img.category-card__img(src='images/banner-carpet2.jfif')
+                        p.category-card__title فرش مستطیل
+
+
+    section.index-sec
+        .container
+            .index-widget-header
+                .title-line محصولات پرفروش
+    block script
+        script.
+            let swiper = new Swiper(".swiper", {
+                // slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 50,
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                        spaceBetween: 50,
+                    },
+                    1400: {
+                        slidesPerView: 1,
+                        spaceBetween: 50,
+                    },
+                    1600: {
+                        slidesPerView: 1,
+                        spaceBetween: 50,
+                    }
+                },
+            });
+

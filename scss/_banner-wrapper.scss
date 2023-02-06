@@ -1,0 +1,13 @@
+.banners{
+  &__wrapper{
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  &__item{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+
+  }
+}
